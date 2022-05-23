@@ -31,6 +31,12 @@ body {
 .currentOperation {
   padding: 15px;
 }
+.currentOperation {
+  font-size: 40px;
+}
+.lastOperation {
+  font-size: 20px;
+}
 .clear,
 .delete {
   width: 200px;
