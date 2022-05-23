@@ -27,15 +27,15 @@ body {
   text-align: right;
   justify-content: space-between;
 }
-.lastOperation,
-.currentOperation {
-  padding: 15px;
-}
+
 .currentOperation {
   font-size: 40px;
+  padding: 15px;
 }
 .lastOperation {
   font-size: 20px;
+  min-height: 20px;
+  padding: 5px;
 }
 .clear,
 .delete {
