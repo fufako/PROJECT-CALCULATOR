@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff8dc;
+  font-family: "Indie Flower", cursive;
+  flex-direction: column;
+}
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  height: 620px;
+  width: 450px;
+  padding: 25px 10px 25px 10px;
+  border-radius: 5px;
+}
+.screen {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 90%;
+  margin: 10px;
+  background-color: gainsboro;
+  border-radius: 5px;
+  text-align: right;
+  justify-content: space-between;
+}
+.lastOperation,
+.currentOperation {
+  padding: 15px;
+}
+.clear,
+.delete {
+  width: 200px;
+  height: 50px;
+  font-size: 40px;
+}
+.grid-elements button {
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+}
+.grid-elements {
+  display: grid;
+  grid-template-columns: repeat(4, 97px);
+  grid-template-rows: repeat(4, 97px);
+  gap: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
