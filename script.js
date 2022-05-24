@@ -27,16 +27,44 @@ const deleteBtn = document.querySelector(".delete")
 
 clearBtn.onclick = () => clear()
 deleteBtn.onclick = () => del()
+dotBtn.onclick = () => dotAssign()
 
 equalsBtn.onclick = () => operate()
 
-function store(number) {
-  currNumb += number
+function dotAssign() {
+  if (currNumb === "") {
+    currNumb += "0."
+    currOperation.textContent = "0."
+  } else if (currNumb === "0") {
+    currNumb += "."
+    currOperation.textContent = currNumb
+  } else if (currNumb.includes(".") == false) {
+    currNumb += "."
+  }
+}
+function zeroAssign() {
+  if (currNumb !== "0") {
+    currNumb += "0"
+  }
   currOperation.textContent = currNumb
+}
+function store(number) {
+  if (currNumb.length < 30) {
+    if (number === "0") {
+      zeroAssign()
+    } else {
+      currNumb += number
+      currOperation.textContent = currNumb
+    }
+  }
 }
 
 function operatorPressed(currOperator) {
-  lastOperation.textContent = currNumb + " " + currOperator + " "
+  if (currNumb === "") {
+    lastOperation.textContent = "0 " + currOperator + " "
+  } else {
+    lastOperation.textContent = currNumb + " " + currOperator + " "
+  }
   prevNumb = currNumb
   currNumb = ""
   operator = currOperator
@@ -70,5 +98,3 @@ function del() {
   currNumb = currNumb.slice(0, -1)
   currOperation.textContent = currNumb
 }
-
-function main() {}
