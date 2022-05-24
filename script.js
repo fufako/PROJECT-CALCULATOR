@@ -40,6 +40,7 @@ function dotAssign() {
     currOperation.textContent = currNumb
   } else if (currNumb.includes(".") == false) {
     currNumb += "."
+    currOperation.textContent = currNumb
   }
 }
 function zeroAssign() {
